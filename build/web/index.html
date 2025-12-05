@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MissPastelitos</title>
+        <meta charset="UTF-8">
+        <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+        <meta name= "Author" content="Elaborado por luxdev" >
+        <meta name= "description" content="Reserva tus pastelitos de tu casa a tu cumpleaños">
+        <link rel="icon" href="resources/abuelita.png">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <style>
+            .font-raleway {
+                font-family: 'Raleway', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body class="bg-white">
+        <nav class="bg-white shadow-md px-4 py-3">
+
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-3 mx-4">
+                    <img src="resources/abuelita.png" class="h-16 w-16 " />
+                    <img src="resources/textoMP.png" alt="" class="h-16 w-32"/>
+                </div>
+
+                <div class="flex justify-center ml-6">
+                    <input type="text" placeholder="Buscar..." class="bg-white w-full md:w-96 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+                </div>
+
+                <div class="hidden md:flex space-x-6 items-center mx-4">
+                    <a href="index.html" class="relative font-semibold text-lg text-gray-700 hover:text-[#C27C3A] 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-[#C27C3A] after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Inicio
+                    </a>
+             
+                    <a href="#" class="relative font-semibold text-lg text-gray-700 hover:text-[#C27C3A] 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-[#C27C3A] after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Servicios
+                    </a>
+              
+                    <a href="modulos/menu.html" class="relative font-semibold text-lg text-gray-700 hover:text-[#C27C3A] 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-[#C27C3A] after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Menu
+                    </a>
+
+                    <a href="modulos/loginn.html" class="relative font-semibold text-lg text-gray-700 hover:text-[#C27C3A] 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-[#C27C3A] after:mx-auto
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Iniciar sesion
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-pink-600 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                             viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+
+            <div id="mobile-menu" class="md:hidden hidden mt-3 px-4 space-y-2">
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Nosotros</a>
+                <a href="modulos/login.html" class="block text-gray-700 hover:text-blue-600 font-medium">Inicia sesion</a>
+            </div>
+        </nav>
+        
+        <main>
+            <section class="relative w-full h-[600px] overflow-hidden">
+
+                <div id="slider" class="flex transition-transform duration-700 ease-in-out cursor-pointer h-full">
+
+                    <div class="w-full flex-shrink-0 h-full relative">
+                        <img src="resources/slide2.jpg" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4">
+                            <h2 class="text-white text-[128px] md:text-4xl font-bold">
+                                Dulces Momentos
+                            </h2>
+                            <p class="text-white text-2xl md:text-4xl font-light font-raleway mb-4">
+                                Recuerdos inolvidables
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 h-full relative">
+                        <img src="resources/slide3.jpg" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4">
+                            <h2 class="text-white text-[128px] md:text-4xl font-bold">
+                                Regalate un dulce momento
+                            </h2>
+                            <p class="text-white text-2xl md:text-4xl font-light font-raleway mb-4">
+                                Ordena en linea y recoge en la sucursal
+                            </p>
+                            <button class="bg-[#C27C3A] text-white px-6 py-2 rounded hover:bg-[#A16730] transition">
+                                Ordenar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex-shrink-0 h-full relative">
+                        <img src="resources/slide4.jpg" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-4">
+                            <h2 class="text-white text-[128px] md:text-4xl font-bold">
+                                Registrate ahora mismo
+                            </h2>
+                            <p class="text-white text-2xl md:text-4xl font-light font-raleway mb-4">
+                                Obten un 10% de descuento en tu primera compra
+                            </p>
+                            <button class="bg-[#C27C3A] text-white px-6 py-2 rounded hover:bg-[#A16730] transition">
+                                Explorar
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75">
+                    &#8592;
+                </button>
+                <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75">
+                    &#8594;
+                </button>
+            </section>
+
+            <section class="bg-white mt-16 mb-8">
+
+                <div class="w-full grid grid-cols-7 grid-rows-5 gap-4">
+
+                    <div class="w-full h-full col-span-3 row-span-5">
+                        <div class=" w-full h-full hidden md:block" data-aos="fade-right">
+                            <img src="resources/cumpleanos.jpg" alt="joto"
+                                 class="rounded-xl w-full h-auto object-cover">
+                            <div class="absolute -top-4 -left-4 w-12 h-12 bg-purple-200 rounded-full opacity-50 hidden lg:block animate-pulse"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-span-4 row-span-5 col-start-4 bg-[#B57935] rounded-xl">
+                        <div class="w-full m-5" data-aos="fade-left">
+                            <p class="font-raleway text-4xl font-light text-white ml-8 mr-14 mt-20 tracking-wide text-center max-w-2xl">
+                                Construimos momentos, inspiramos felicidad
+                            </p>
+
+                            <p class="text-2xl font-semibold text-white text-center mt-8">
+                                Esta temporada las reuniones se disfrutan en familia <br> Ven y disfruta nuestros pasteles. ¡Te esperamos!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="w-full max-w-6xl mx-auto py-12 px-4">
+                    <h2 class="text-center text-4xl font-light text-[#814c59] mb-10 tracking-wide">
+                        NUESTROS ESPECIALES DEL MES
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                        <div class="flex flex-col items-center text-center">
+                            <div class="overflow-hidden rounded-lg shadow-md">
+                                <img src="resources/cheeskae.webp" alt="cheeskake" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <p class="mt-3 text-lg font-medium text-gray-800">Pastel Mil Hojas</p>
+                            <p class="text-sm text-gray-500">Delicado pastel con capas crujientes y crema suave.</p>
+                        </div>
+
+                        <div class="flex flex-col items-center text-center">
+                            <div class="overflow-hidden rounded-lg shadow-md">
+                                <img src="resources/pastel1.webp" alt="Pastel rico" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <p class="mt-3 text-lg font-medium text-gray-800">Pastel Mil Hojas</p>
+                            <p class="text-sm text-gray-500">Delicado pastel con capas crujientes y crema suave.</p>
+                        </div>
+
+                        <div class="flex flex-col items-center text-center">
+                            <div class="overflow-hidden rounded-lg shadow-md">
+                                <img src="resources/pastel2.webp" alt="pastel de colA" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <p class="mt-3 text-lg font-medium text-gray-800">Pastel Mil Hojas</p>
+                            <p class="text-sm text-gray-500">Delicado pastel con capas crujientes y crema suave.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class=" my-8 relative w-full h-[500px] overflow-hidden">
+                <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+                    <source src="resources/pastelesvideo.mp4" type="video/mp4" />
+                </video>
+            </section>
+        </main>
+
+        <footer id="foter" class="bg-[#6B4420] text-white py-3 mt-auto">
+            <div class="max-w-6xl mx-auto h-24 px-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+
+                <div class="flex items-center space-x-2">
+                    <span class="text-lg font-semibold">MissPastelitos</span>
+                </div>
+
+                <p class="text-sm text-center md:text-left">© 2025 MissPastelitos. Todos los derechos reservados.</p>
+
+                <div class="flex items-center space-x-2">
+
+                    <a href="https://www.facebook.com/Ortobionika/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+                        <img src="resources/facebookIcon.png" alt="Facebook" class="w-8 h-8">
+                    </a>
+
+                    <a href="https://wa.me/524776971513" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+                        <img src="resources/twitterIcon.png" alt="Twitter" class="w-8 h-8">
+                    </a>
+
+                    <a href="https://wa.me/524776971513" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+                        <img src="resources/whatsAppIcon.png" alt="WhatsApp" class="w-8 h-8">
+                    </a>
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>

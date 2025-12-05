@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MissPastelitos</title>
+        <meta charset="UTF-8">
+        <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+        <meta name= "Author" content="Elaborado por luxdev" >
+        <meta name= "description" content="Reserva tus pastelitos de tu casa a tu cumpleaños">
+        <link rel="icon" href="../resources/abuelita.png">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+       
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <style>
+            .font-raleway {
+                font-family: 'Raleway', sans-serif;
+            }
+        </style>   
+    </head>
+    <body class="bg-white">
+        <nav class="bg-white shadow-md px-4 py-3">
+
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-3 mx-4">
+                    <img src="../resources/abuelita.png" class="h-16 w-16 " />
+                    <img src="../resources/textoMP.png" alt="" class="h-16 w-32"/>
+                </div>
+
+                <div class="flex justify-center ml-6">
+                    <input type="text" placeholder="Buscar..." class="bg-white w-full md:w-96 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C27C3A]"/>
+                </div>
+
+                <div class="hidden md:flex space-x-6 items-center mx-4">
+                    <a href="../index.html" class="relative font-semibold text-lg text-gray-700 hover:text-[#C27C3A] 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-[#C27C3A] after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Inicio
+                    </a>
+
+                    <a href="#" class="relative font-semibold text-lg text-gray-700 hover:text-[#C27C3A] 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-[#C27C3A] after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Servicios
+                    </a>
+
+                    <a href="menu.html" class="relative font-semibold text-lg text-gray-700 hover:text-[#C27C3A] 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-[#C27C3A] after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Menu
+                    </a>
+
+                    <a href="loginn.html" class="relative font-semibold text-lg text-gray-700 hover:text-[#C27C3A] 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-[#C27C3A] after:mx-auto
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Iniciar sesion
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-pink-600 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                             viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+
+            <div id="mobile-menu" class="md:hidden hidden mt-3 px-4 space-y-2">
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Nosotros</a>
+                <a href="modulos/login.html" class="block text-gray-700 hover:text-blue-600 font-medium">Inicia sesion</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="grid grid-cols-5 grid-rows-5 gap-4">
+
+                <div class="col-span-2 row-span-5 ">
+                    <div class="overflow-hidden rounded-lg shadow-md my-14">
+                        <img src="../resources/cheeskae.webp" alt="cheeskake" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+
+                <div class="col-span-3 row-span-5 col-start-3">
+                    <div class="p-8">
+                        <p class="text-[#C27C3A] text-4xl md:text-5xl font-light font-raleway mt-14">
+                            Cheescake
+                        </p>
+
+                        <form class="space-y-4">
+                            
+                            <p class="text-lg text-stone-600 font-semibold mt-4">
+                                Delicioso cheesecake estilo New York con mermelada casera de zarzamoras con un toque de jugo de limón.
+                            </p>
+                            <p class="text-lg text-stone-800 font-bold mt-2">
+                            $400   
+                            </p>
+                            
+                            
+                            
+                            <div class="flex items-end space-x-4">
+
+                                <div class="w-1/3 mr-8">
+                                    <label for="pastel" class="block text-black-600 font-semibold mb-2">Selecciona el tamaño</label>
+                                    <select id="pastel" name="pastel" required
+                                            class="w-full pl-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800 focus:border-transparent transition duration-200">
+                                        <option value="">-- Elige un tamaño --</option>
+                                        <option value="cheesecake">Pequeño</option>
+                                        <option value="chocolate">Mediano</option>
+                                        <option value="vainilla">Grande</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="cantidad" class="block text-black-600 font-semibold mb-2">Cantidad</label>
+                                    <input type="number" id="cantidad" name="cantidad" min="1" value="1" required
+                                           class="w-24 pl-4 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800 focus:border-transparent transition duration-200">
+                                </div>
+                            </div>
+
+                            <div class="flex items-end space-x-4">
+                                
+                            <div class="w-1/3 mr-24">
+                                <label for="fecha" class="block text-black-600 font-semibold mb-2">Fecha de entrega</label>
+                                <input type="date" id="fecha" name="fecha" required
+                                       class="w-full pl-10 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-800 focus:border-transparent transition duration-200">
+                                <p id="fecha-error" class="text-sm text-red-500 mt-1 hidden">Este día ya no tiene disponibilidad</p>
+                            </div>
+
+                            <div class="flex items-end">
+                                <button type="submit" onclick="realizarCompraAlert();"
+                                        class="w-full bg-[#C27C3A] text-white py-2 px-4 rounded-lg shadow hover:bg-[#A16730] transition">
+                                    Realizar pedido
+                                </button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <footer id="foter" class="bg-[#6B4420] text-white py-3 mt-auto">
+            <div class="max-w-6xl mx-auto h-24 px-4 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+
+                <div class="flex items-center space-x-2">
+                    <span class="text-lg font-semibold">MissPastelitos</span>
+                </div>
+
+                <p class="text-sm text-center md:text-left">© 2025 MissPastelitos. Todos los derechos reservados.</p>
+
+                <div class="flex items-center space-x-2">
+
+                    <a href="https://www.facebook.com/Ortobionika/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+                        <img src="resources/facebookIcon.png" alt="Facebook" class="w-8 h-8">
+                    </a>
+
+                    <a href="https://wa.me/524776971513" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+                        <img src="resources/twitterIcon.png" alt="Twitter" class="w-8 h-8">
+                    </a>
+
+                    <a href="https://wa.me/524776971513" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 transition">
+                        <img src="resources/whatsAppIcon.png" alt="WhatsApp" class="w-8 h-8">
+                    </a>
+
+                </div>
+            </div>
+        </footer>
+        
+        <script src="ordenar.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MissPastelitos</title>
+        <meta charset="UTF-8">
+        <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+        <meta name= "Author" content="Elaborado por luxdev" >
+        <meta name= "description" content="Reserva tus pastelitos de tu casa a tu cumpleaños">
+        <link rel="icon" href="../resources/abuelita.png">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+        <style>
+
+            .font-raleway {
+                font-family: 'Raleway', sans-serif;
+            }
+
+            body {
+                background-image: url('../resources/slide4.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .fade-in {
+                animation: fadeIn 1s ease-out forwards;
+            }
+        </style>    
+    </head>
+    <body class="min-h-screen flex flex-col">
+
+        <nav class="bg-white shadow-md px-4 py-3">
+
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center space-x-3 mx-4">
+                    <img src="../resources/abuelita.png" class="h-16 w-16 " />
+                    <img src="../resources/textoMP.png" alt="" class="h-16 w-32"/>
+                </div>
+
+                <div class="flex justify-center ml-6">
+                    <input type="text" placeholder="Buscar..." class="bg-white w-full md:w-96 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+                </div>
+
+                <div class="hidden md:flex space-x-6 items-center mx-4">
+                    <a href="../index.html" class="relative font-semibold text-lg text-gray-700 hover:text-red-500 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-red-500 after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Inicio
+                    </a>
+
+                    <a href="#" class="relative font-semibold text-lg text-gray-700 hover:text-red-500 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-red-500 after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Servicios
+                    </a>
+
+                    <a href="menu.html" class="relative font-semibold text-lg text-gray-700 hover:text-red-500 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-red-500 after:mx-auto 
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Menu
+                    </a>
+
+                    <a href="loginn.html" class="relative font-semibold text-lg text-gray-700 hover:text-red-500 
+                       after:content-[''] after:block after:w-0 after:h-[3px] after:bg-red-500 after:mx-auto
+                       hover:after:w-full after:transition-all after:duration-300">
+                        Iniciar sesion
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-pink-600 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                             viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+
+            <div id="mobile-menu" class="md:hidden hidden mt-3 px-4 space-y-2">
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+                <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium">Nosotros</a>
+                <a href="modulos/login.html" class="block text-gray-700 hover:text-blue-600 font-medium">Inicia sesion</a>
+            </div>
+        </nav>
+
+        <main class="flex-grow flex items-center justify-center px-4 ">    
+            <div id="loginContainer" class=" fade-in bg-opacity-90 shadow-2xl rounded-2xl overflow-hidden h-[58vh] w-3/5 max-w-5xl grid grid-cols-1 lg:grid-cols-10 gap-0">
+
+                <div class="bg-white lg:col-span-10 flex justify-center mt-6 rounded-t-lg pt-4">
+                    <h2 class="text-4xl font-light font-raleway text-black text-center">
+                        Iniciar Sesión
+                    </h2>
+                </div>
+
+                <div class="lg:flex flex-col p-4 bg-white backdrop-blur-2xl border border-white/20 lg:col-span-5">
+                    <form>
+                        <div class="mb-4 ml-6">
+                            <label class="block text-black-600 font-semibold mb-2" for="usuario">Nombre</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+
+                                    <svg class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M5.121 17.804A8.966 8.966 0 0112 15c2.347 0 4.478.904 6.121 2.381M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </span>
+                                <input id="txtNombre" type="text" placeholder="Ingresa tu nombre"
+                                       class="w-5/6 pl-10 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-red-300 focus:border-transparent transition duration-200" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-6 ml-6">
+                            <label class="block text-black-600 font-semibold mb-2" for="password">Correo Electronico o usuario</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+
+                                    <svg class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M12 11c1.656 0 3 1.344 3 3v1a3 3 0 01-6 0v-1c0-1.656 1.344-3 3-3zM17 11V9a5 5 0 00-10 0v2m10 0H7" />
+                                    </svg>
+                                </span>
+                                <input id="txtUsuario" type="text" placeholder="Ingresa tu contraseña"
+                                       class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-red-300 focus:border-transparent transition duration-200" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="p-4 bg-white shadow-lg lg:col-span-5">
+                    <form>
+
+                        <div class="mb-4">
+                            <label class="block text-black-600 font-semibold mb-2" for="usuario">Apellidos</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+
+                                    <svg class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M5.121 17.804A8.966 8.966 0 0112 15c2.347 0 4.478.904 6.121 2.381M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </span>
+                                <input id="txtApellido" type="text" placeholder="Ingresa tu usuario"
+                                       class="w-[90%] pl-10 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-red-300 focus:border-transparent transition duration-200" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block text-black-600 font-semibold mb-2" for="password">Contraseña</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+
+                                    <svg class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M12 11c1.656 0 3 1.344 3 3v1a3 3 0 01-6 0v-1c0-1.656 1.344-3 3-3zM17 11V9a5 5 0 00-10 0v2m10 0H7" />
+                                    </svg>
+                                </span>
+                                <input id="txtPassword" type="password" placeholder="Ingresa tu contraseña"
+                                       class="w-5/6 pl-10 pr-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-red-300 focus:border-transparent transition duration-200" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="bg-white lg:col-span-10 flex justify-center pb-6 mb-6">
+                    <button id="btn-log" type="submit" onclick="guardarLocal();"
+                            class="bg-red-500 w-40 hover:bg-red-800 text-white font-bold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-200 ease-in-out">
+                        Ingresar
+                    </button>
+                </div>
+
+            </div>
+        </main>  
+        <script src="js.js" type="text/javascript"></script>
+    </body>
+</html>
